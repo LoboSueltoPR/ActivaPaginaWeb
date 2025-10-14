@@ -1,3 +1,19 @@
+// Welcome overlay
+document.addEventListener('DOMContentLoaded', () => {
+  const overlay = document.getElementById('welcomeOverlay');
+  if(!overlay) return;
+
+  requestAnimationFrame(() => overlay.classList.add('is-active'));
+
+  const hide = () => {
+    overlay.classList.add('is-leaving');
+    overlay.addEventListener('transitionend', () => overlay.remove(), { once: true });
+  };
+
+  const delay = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 400 : 2200;
+  setTimeout(hide, delay);
+});
+
 // Mobile menu
 const hamburger = document.getElementById('hamburger');
 const nav = document.getElementById('mainNav');
