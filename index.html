@@ -10,10 +10,22 @@
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
+  <section class="welcome-hero" id="bienvenida">
+    <img class="welcome-hero__photo" src="assets/img/activa/grupo.jpg" alt="Integrantes de Activá reunidos" />
+    <div class="welcome-hero__content">
+      <h1 id="bienvenida-titulo">Bienvenidx a Activa</h1>
+      <p>Desliza para conocer mas.</p>
+      <a class="welcome-hero__cta" href="#contenido" aria-describedby="bienvenida-titulo">Entrar</a>
+    </div>
+    <div class="welcome-hero__hint" aria-hidden="true">
+      Desliza para conocer mas
+      <span></span>
+    </div>
+  </section>
   <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#">
+      <a class="brand" href="#bienvenida">
         <img src="assets/img/logos/logo.svg" alt="Logo Activá" onerror="this.style.display='none'">
         <span>Activá</span>
       </a>
@@ -31,7 +43,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="contenido">
     <!-- HERO / Noticias principales (carrusel) -->
     <section class="hero">
       <div class="container">
