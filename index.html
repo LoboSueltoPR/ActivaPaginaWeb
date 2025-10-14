@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Activá - Inicio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <img src="assets/img/logos/logo.svg" alt="Logo Activá" onerror="this.style.display='none'">
+        <span>Activá</span>
+      </a>
+      <nav class="main-nav" id="mainNav">
+        <a href="#quienes">Quiénes somos</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#contacto">Contacto</a>
+        <div class="socials">
+          <a href="#" aria-label="Instagram" title="Instagram">◎</a>
+          <a href="#" aria-label="YouTube" title="YouTube">▶</a>
+          <a href="#" aria-label="Facebook" title="Facebook">f</a>
+        </div>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú">&#9776;</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO / Noticias principales (carrusel) -->
+    <section class="hero">
+      <div class="container">
+        <div class="carousel" id="heroCarousel" aria-roledescription="carousel">
+          <div class="carousel-track">
+            <!-- Reemplazá las imágenes 01.jpg, 02.jpg, ... en assets/img/noticias/ -->
+            <article class="slide is-active">
+              <img src="assets/img/noticias/01.jpg" alt="Noticia destacada 1" />
+              <div class="slide-caption">
+                <h2>Noticia destacada 1</h2>
+                <p>Resumen breve de la noticia principal.</p>
+              </div>
+            </article>
+            <article class="slide">
+              <img src="assets/img/noticias/02.jpg" alt="Noticia destacada 2" />
+              <div class="slide-caption">
+                <h2>Noticia destacada 2</h2>
+                <p>Otro resumen breve para el carrusel.</p>
+              </div>
+            </article>
+            <article class="slide">
+              <img src="assets/img/noticias/03.jpg" alt="Noticia destacada 3" />
+              <div class="slide-caption">
+                <h2>Noticia destacada 3</h2>
+                <p>Texto breve acompañando la imagen.</p>
+              </div>
+            </article>
+          </div>
+          <button class="carousel-btn prev" data-dir="-1" aria-label="Anterior">‹</button>
+          <button class="carousel-btn next" data-dir="1" aria-label="Siguiente">›</button>
+          <div class="carousel-dots" id="heroDots" aria-label="Indicadores del carrusel"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bloque Activá (foto + resumen + Ver más) -->
+    <section class="intro">
+      <div class="container intro-grid">
+        <div class="intro-photo">
+          <!-- Reemplazar por foto grupal en assets/img/activa/grupo.jpg -->
+          <img src="assets/img/activa/grupo.jpg" alt="Foto grupal de Activá" />
+        </div>
+        <div class="intro-text">
+          <h3>Activá</h3>
+          <p>
+            Activá es una agrupación que pone el foco en la participación juvenil y la cultura.
+            Desde diferentes proyectos comunitarios y artísticos, promovemos el encuentro, la formación y la producción.
+          </p>
+          <a class="btn" href="#quienes">Ver más</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tarjetas principales (como en el wireframe) -->
+    <section class="home-cards">
+      <div class="container cards-grid">
+        <a class="card page-link" data-transition href="proyectos/index.html">
+          <img src="assets/img/proyectos/cover.jpg" alt="Proyectos" />
+          <span>Proyectos</span>
+        </a>
+        <a class="card" href="#coberturas">
+          <img src="assets/img/coberturas/cover.jpg" alt="Coberturas" />
+          <span>Coberturas</span>
+        </a>
+        <a class="card" href="#blog">
+          <img src="assets/img/blog/cover.jpg" alt="Blog / Substack" />
+          <span>Blog · Substack</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- SECCIONES -->
+    <section id="quienes" class="section">
+      <div class="container two-col">
+        <div>
+          <h2>Quiénes somos</h2>
+          <p>Breve descripción institucional. Acá podés ampliar la info general.</p>
+          <ul class="bullet-columns">
+            <li><a href="#organigrama">Organigrama</a></li>
+            <li><a href="#historia">Historia</a></li>
+            <li><a href="#pilares">Pilares fundamentales</a></li>
+          </ul>
+        </div>
+        <div class="photo-box">
+          <img src="assets/img/activa/equipo.jpg" alt="Equipo Activá">
+        </div>
+      </div>
+    </section>
+
+    <section id="organigrama" class="section muted">
+      <div class="container">
+        <h2>Organigrama</h2>
+        <p>Espacio para diagrama/imagen del organigrama.</p>
+        <img class="wide" src="assets/img/activa/organigrama.png" alt="Organigrama">
+      </div>
+    </section>
+
+    <section id="historia" class="section">
+      <div class="container">
+        <h2>Historia</h2>
+        <p>Texto histórico de la agrupación.</p>
+      </div>
+    </section>
+
+    <section id="pilares" class="section muted">
+      <div class="container">
+        <h2>Pilares fundamentales</h2>
+        <ul class="pillars">
+          <li>Participación</li>
+          <li>Formación</li>
+          <li>Cultura</li>
+          <li>Comunidad</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="proyectos" class="section">
+      <div class="container">
+        <h2>Proyectos</h2>
+        <div class="cards-grid projects">
+          <a class="card" href="proyectos/activa-45.html" class="page-link" data-transition title="Activá 45’">
+            <img src="assets/img/proyectos/activa-45.jpg" alt="Activá 45’"><span>Activá 45’</span>
+          </a>
+          <a class="card" href="proyectos/activa-barrio.html" class="page-link" data-transition title="Activá tu barrio">
+            <img src="assets/img/proyectos/activa-barrio.jpg" alt="Activá tu barrio"><span>Activá tu barrio</span>
+          </a>
+          <a class="card" href="proyectos/alfabetizacion.html" class="page-link" data-transition title="Proyecto de alfabetización">
+            <img src="assets/img/proyectos/alfabetizacion.jpg" alt="Proyecto de alfabetización"><span>Proyecto de alfabetización</span>
+          </a>
+          <a class="card" href="proyectos/club-espectadores.html" class="page-link" data-transition title="Club de espectadores">
+            <img src="assets/img/proyectos/club-espectadores.jpg" alt="Club de espectadores"><span>Club de espectadores</span>
+          </a>
+          <a class="card" href="proyectos/festival-word.html" class="page-link" data-transition title="Festival de rap - Word">
+            <img src="assets/img/proyectos/festival-word.jpg" alt="Festival de rap - Word"><span>Festival de rap - Word</span>
+          </a>
+          <a class="card" href="proyectos/ediciones.html" class="page-link" data-transition title="Ediciones anteriores">
+            <img src="assets/img/ediciones/cover.jpg" alt="Ediciones anteriores"><span>Ediciones anteriores</span>
+          </a>
+          <a class="card" href="proyectos/videoclips.html" class="page-link" data-transition title="Activá videoclips">
+            <img src="assets/img/videoclips/cover.jpg" alt="Activá videoclips"><span>Activá videoclips</span>
+          </a>
+          <a class="card" href="proyectos/foro.html" class="page-link" data-transition title="Foro de debate joven">
+            <img src="assets/img/proyectos/foro.jpg" alt="Foro de debate joven"><span>Foro de debate joven</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="ediciones" class="section muted">
+      <div class="container">
+        <h2>Foro de debate joven - Ediciones</h2>
+        <div class="ediciones">
+          <a href="#" class="tag">1era edición</a>
+          <a href="#" class="tag">2da edición</a>
+          <a href="#" class="tag">3ra edición</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="videoclips" class="section">
+      <div class="container">
+        <h2>Activá videoclips</h2>
+        <div class="carousel slim" id="clipsCarousel">
+          <div class="carousel-track">
+            <article class="slide is-active">
+              <img src="assets/img/videoclips/01.jpg" alt="Videoclip 1" />
+            </article>
+            <article class="slide">
+              <img src="assets/img/videoclips/02.jpg" alt="Videoclip 2" />
+            </article>
+            <article class="slide">
+              <img src="assets/img/videoclips/03.jpg" alt="Videoclip 3" />
+            </article>
+          </div>
+          <button class="carousel-btn prev" data-dir="-1">‹</button>
+          <button class="carousel-btn next" data-dir="1">›</button>
+          <div class="carousel-dots" id="clipsDots"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="coberturas" class="section muted">
+      <div class="container">
+        <h2>Coberturas</h2>
+        <p>Galería de fotos de actividades, marchas y eventos.</p>
+        <div class="masonry">
+          <img src="assets/img/coberturas/01.jpg" alt="Cobertura 1">
+          <img src="assets/img/coberturas/02.jpg" alt="Cobertura 2">
+          <img src="assets/img/coberturas/03.jpg" alt="Cobertura 3">
+          <img src="assets/img/coberturas/04.jpg" alt="Cobertura 4">
+        </div>
+      </div>
+    </section>
+
+    <section id="blog" class="section">
+      <div class="container two-col">
+        <div>
+          <h2>Blog · Substack</h2>
+          <p>Acá irán los textos y ensayos (por ejemplo, el del 17 de octubre). Podés enlazar a Substack o embeber publicaciones.</p>
+          <a class="btn outline" href="#" target="_blank" rel="noopener">Ir al blog</a>
+        </div>
+        <div class="photo-box">
+          <img src="assets/img/blog/cover.jpg" alt="Imagen del Blog / Substack">
+        </div>
+      </div>
+    </section>
+
+    <section id="agenda" class="section muted">
+      <div class="container">
+        <h2>Agenda</h2>
+        <ul class="agenda-list">
+          <li><strong>17 Oct</strong> · Publicación de ensayo</li>
+          <li><strong>Próx.</strong> · Actividad comunitaria</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contacto" class="section">
+      <div class="container two-col">
+        <div>
+          <h2>Contacto</h2>
+          <p>Correo: <a href="mailto:hola@activa.org">hola@activa.org</a></p>
+        </div>
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Mensaje enviado');">
+          <input type="text" placeholder="Nombre" required>
+          <input type="email" placeholder="Email" required>
+          <textarea rows="4" placeholder="Mensaje" required></textarea>
+          <button class="btn" type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Activá. Todos los derechos reservados.</small>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
