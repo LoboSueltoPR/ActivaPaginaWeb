@@ -1,3 +1,27 @@
+const RETURN_HASH_KEY = 'activa-return-hash';
+
+// Restore saved section when returning without hash
+(function(){
+  try {
+    const saved = sessionStorage.getItem(RETURN_HASH_KEY);
+    if(!saved || window.location.hash) return;
+    const target = document.querySelector(saved);
+    if(!target) {
+      sessionStorage.removeItem(RETURN_HASH_KEY);
+      return;
+    }
+    const root = document.documentElement;
+    const previousBehavior = root.style.scrollBehavior;
+    root.style.scrollBehavior = 'auto';
+    target.scrollIntoView({block:'start'});
+    root.style.scrollBehavior = previousBehavior || '';
+    history.replaceState(null, '', saved);
+    sessionStorage.removeItem(RETURN_HASH_KEY);
+  } catch (err) {
+    console.error(err);
+  }
+})();
+
 // Mobile menu
 const hamburger = document.getElementById('hamburger');
 const nav = document.getElementById('mainNav');
@@ -68,6 +92,12 @@ document.getElementById('year').textContent = new Date().getFullYear();
     if(!a) return;
     const href = a.getAttribute('href');
     if(!href || href.startsWith('#') || a.target === '_blank') return;
+    const returnHash = a.dataset.returnHash;
+    if(returnHash){
+      try { sessionStorage.setItem(RETURN_HASH_KEY, returnHash); } catch(err){ console.error(err); }
+    } else {
+      try { sessionStorage.removeItem(RETURN_HASH_KEY); } catch(err){ console.error(err); }
+    }
     e.preventDefault();
     exit(href);
   });
