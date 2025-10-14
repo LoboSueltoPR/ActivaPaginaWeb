@@ -11,10 +11,11 @@
 </head>
 <body>
   <section class="welcome-hero" id="bienvenida">
+    <img class="welcome-hero__photo" src="assets/img/activa/grupo.jpg" alt="Integrantes de Activá reunidos" />
     <div class="welcome-hero__content">
-      <h1>¡Bienvenid@s a Activá!</h1>
+      <h1 id="bienvenida-titulo">¡Bienvenid@s a Activá!</h1>
       <p>Deslizá hacia abajo para entrar con toda la energía del grupo.</p>
-      <a class="welcome-hero__cta" href="#contenido">Entrar</a>
+      <a class="welcome-hero__cta" href="#contenido" aria-describedby="bienvenida-titulo">Entrar</a>
     </div>
     <div class="welcome-hero__hint" aria-hidden="true">
       Deslizá hacia abajo
@@ -24,7 +25,7 @@
   <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#">
+      <a class="brand" href="#bienvenida">
         <img src="assets/img/logos/logo.svg" alt="Logo Activá" onerror="this.style.display='none'">
         <span>Activá</span>
       </a>

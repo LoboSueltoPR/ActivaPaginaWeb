@@ -32,15 +32,18 @@ body{
   padding:64px 24px 48px;
   color:#fff;
   overflow:hidden;
+  background:#0f172a;
 }
 
-.welcome-hero::before{
-  content:"";
+.welcome-hero__photo{
   position:absolute;
   inset:0;
-  background:url('../img/activa/grupo.jpg') center/cover no-repeat;
+  width:100%;
+  height:100%;
+  object-fit:cover;
   transform:scale(1.08);
   filter:saturate(1.08);
+  z-index:0;
 }
 
 .welcome-hero::after{
@@ -48,18 +51,20 @@ body{
   position:absolute;
   inset:0;
   background:linear-gradient(180deg, rgba(9,16,32,.15) 0%, rgba(15,23,42,.72) 65%, rgba(15,23,42,.94) 100%);
+  z-index:1;
 }
 
 .welcome-hero__content{
   position:relative;
-  z-index:1;
+  z-index:2;
   width:min(640px, 90%);
   margin-inline:auto;
   text-align:center;
   padding:32px 28px;
   border-radius:28px;
-  backdrop-filter:blur(18px);
   background:rgba(15,23,42,.45);
+  -webkit-backdrop-filter:blur(18px);
+  backdrop-filter:blur(18px);
   box-shadow:0 32px 70px rgba(15,23,42,.42);
 }
 
@@ -108,6 +113,7 @@ body{
   align-items:center;
   gap:.45rem;
   pointer-events:none;
+  z-index:2;
 }
 
 .welcome-hero__hint span{
@@ -132,6 +138,11 @@ body{
 
 .welcome-hero__hint span::after{
   animation-delay:.3s;
+}
+
+@media (prefers-reduced-motion: reduce){
+  .welcome-hero__hint span::before,
+  .welcome-hero__hint span::after{animation:none;}
 }
 
 @keyframes scroll-hint{
