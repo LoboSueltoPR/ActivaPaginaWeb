@@ -337,6 +337,12 @@ a{color:inherit; text-decoration:none}
   overflow:hidden;
   flex-shrink:0;
 }
+/* Limita la altura del embed de Instagram */
+.chapter-trailer .instagram-media {
+  max-height: 400px;
+  overflow: auto;
+  width: 100%;
+}
 .socials a span{display:flex; align-items:center; justify-content:center; width:100%; height:100%;}
 .socials a img{
   width:150%;
