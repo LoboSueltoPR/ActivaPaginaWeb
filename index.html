@@ -50,7 +50,7 @@
 
   <main id="contenido">
     <!-- HERO / Noticias principales (carrusel) -->
-    <section class="hero">
+    <section class="hero" id="novedades">
       <div class="container">
         <div class="carousel" id="heroCarousel" aria-roledescription="carousel">
           <div class="carousel-track">
@@ -76,11 +76,13 @@
               </div>
             </article>
             <article class="slide">
-              <img src="assets/img/noticias/03.jpg" alt="Noticia destacada 3" />
-              <div class="slide-caption">
-                <h2>Noticia destacada 3</h2>
-                <p>Texto breve acompañando la imagen.</p>
-              </div>
+              <a class="slide-link page-link" data-transition data-return-hash="#novedades" href="proyectos/activa-45.html" title="Activá 45’ · Último capítulo">
+                <img src="assets/img/noticias/03.jpg" alt="Último capítulo de Activá 45’" />
+                <div class="slide-caption">
+                  <h2>Activá 45’ · Último capítulo</h2>
+                  <p>Entrá y descubrí el episodio completo con su trailer.</p>
+                </div>
+              </a>
             </article>
           </div>
           <button class="carousel-btn prev" data-dir="-1" aria-label="Anterior">‹</button>
