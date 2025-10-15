@@ -25,7 +25,43 @@ const RETURN_HASH_KEY = 'activa-return-hash';
 // Mobile menu
 const hamburger = document.getElementById('hamburger');
 const nav = document.getElementById('mainNav');
-hamburger?.addEventListener('click', () => nav.classList.toggle('is-open'));
+const navBackdrop = document.getElementById('navBackdrop');
+
+function setMenuState(open){
+  if(!nav) return;
+  nav.classList.toggle('is-open', open);
+  document.body.classList.toggle('menu-open', open);
+  if(hamburger){
+    hamburger.classList.toggle('is-active', open);
+    hamburger.setAttribute('aria-expanded', String(open));
+    hamburger.textContent = open ? '×' : '☰';
+    hamburger.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+  }
+  navBackdrop?.classList.toggle('is-active', open);
+}
+
+hamburger?.addEventListener('click', () => {
+  const willOpen = !nav?.classList.contains('is-open');
+  setMenuState(Boolean(willOpen));
+});
+
+navBackdrop?.addEventListener('click', () => setMenuState(false));
+
+nav?.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => setMenuState(false));
+});
+
+window.addEventListener('resize', () => {
+  if(window.innerWidth > 820){
+    setMenuState(false);
+  }
+});
+
+document.addEventListener('keydown', (event) => {
+  if(event.key === 'Escape'){
+    setMenuState(false);
+  }
+});
 
 // Simple Carousel factory
 function makeCarousel(rootId, dotsId){
