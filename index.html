@@ -177,11 +177,24 @@
       <div class="container">
         <h2>Coberturas</h2>
         <p>Galería de fotos de actividades, marchas y eventos.</p>
-        <div class="masonry">
-          <img src="assets/img/coberturas/01.jpg" alt="Cobertura 1">
-          <img src="assets/img/coberturas/02.jpg" alt="Cobertura 2">
-          <img src="assets/img/coberturas/03.jpg" alt="Cobertura 3">
-          <img src="assets/img/coberturas/04.jpg" alt="Cobertura 4">
+        <div class="carousel slim carousel--peek" id="coverageCarousel" aria-roledescription="carousel">
+          <div class="carousel-track">
+            <article class="slide is-active">
+              <img src="assets/img/coberturas/01.jpg" alt="Integrantes de Activá marchando con pancartas" loading="lazy" />
+            </article>
+            <article class="slide">
+              <img src="assets/img/coberturas/02.jpg" alt="Carteles y banderas en la marcha por el triple femicidio" loading="lazy" />
+            </article>
+            <article class="slide">
+              <img src="assets/img/coberturas/03.jpg" alt="Participantes de la movilización abrazándose" loading="lazy" />
+            </article>
+            <article class="slide">
+              <img src="assets/img/coberturas/04.jpg" alt="Vista general de la marcha y su bandera principal" loading="lazy" />
+            </article>
+          </div>
+          <button class="carousel-btn prev" data-dir="-1" aria-label="Anterior">‹</button>
+          <button class="carousel-btn next" data-dir="1" aria-label="Siguiente">›</button>
+          <div class="carousel-dots" id="coverageDots" aria-label="Indicadores del carrusel"></div>
         </div>
       </div>
     </section>
