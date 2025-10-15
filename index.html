@@ -29,7 +29,7 @@
         <img src="assets/img/logos/logo.svg" alt="Logo Activá" onerror="this.style.display='none'">
       </a>
       <nav class="main-nav" id="mainNav">
-        <a href="#quienes">Quiénes somos</a>
+        <a class="page-link" data-transition href="quienes-somos.html">Quiénes somos</a>
         <a href="#agenda">Agenda</a>
         <a href="#contacto">Contacto</a>
         <div class="socials">
@@ -44,10 +44,8 @@
           </a>
         </div>
       </nav>
-      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-controls="mainNav" aria-expanded="false">&#9776;</button>
     </div>
   </header>
-  <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
 
   <main id="contenido">
     <!-- HERO / Noticias principales (carrusel) -->
@@ -97,7 +95,7 @@
             en sus demandas originales y en la refundación de una política al servicio de las personas, 
             transformando desde la acción y con dos direcciones claras: desde atrás hacia adelante, y desde abajo hacia arriba.
           </p>
-          <a class="btn" href="#quienes">Ver más</a>
+          <a class="btn page-link" data-transition href="quienes-somos.html">Leer más</a>
         </div>
       </div>
     </section>
@@ -109,13 +107,13 @@
           <img src="assets/img/proyectos/cover.jpg" alt="Proyectos" />
           <span>Proyectos</span>
         </a>
-        <a class="card" href="#coberturas">
-          <img src="assets/img/coberturas/cover.jpg" alt="Coberturas" />
-          <span>Coberturas</span>
-        </a>
         <a class="card" href="#blog">
           <img src="assets/img/blog/cover.jpg" alt="Blog / Substack" />
           <span>Blog · Substack</span>
+        </a>
+        <a class="card" href="#coberturas">
+          <img src="assets/img/coberturas/cover.jpg" alt="Coberturas" />
+          <span>Coberturas</span>
         </a>
       </div>
     </section>
@@ -125,58 +123,13 @@
       <div class="container two-col">
         <div>
           <h2>Quiénes somos</h2>
-          <p>Breve descripción institucional. Acá podés ampliar la info general.</p>
-          <ul class="bullet-columns">
-            <li><a href="#organigrama">Organigrama</a></li>
-            <li><a href="#historia">Historia</a></li>
-            <li><a href="#pilares">Pilares fundamentales</a></li>
-          </ul>
+          <p>Activá - juventudes y militancia es un espacio para impulsar la participación, la cultura y la organización de las juventudes desde abajo hacia arriba.</p>
+          <p>Conocé nuestro organigrama, la historia y los pilares fundamentales del proyecto en la página dedicada.</p>
+          <a class="btn page-link" data-transition href="quienes-somos.html">Explorar más</a>
         </div>
         <div class="photo-box">
-          <img src="assets/img/activa/equipo.jpg" alt="Equipo Activá">
+          <img src="assets/img/activa/grupo.jpg" alt="Equipo Activá">
         </div>
-      </div>
-    </section>
-
-    <section id="organigrama" class="section muted">
-      <div class="container">
-        <h2>Organigrama</h2>
-        <img class="wide" src="assets/img/activa/organigrama.png" alt="Organigrama">
-      </div>
-    </section>
-
-    <section id="historia" class="section">
-      <div class="container">
-        <h2>Historia</h2>
-        <p>Texto histórico de la agrupación.</p>
-      </div>
-    </section>
-
-    <section id="pilares" class="section muted">
-      <div class="container">
-        <h2>Pilares fundamentales</h2>
-        <ul class="pillars">
-          <li>
-            <span class="pillar-icon" aria-hidden="true">🤝</span>
-            <h3>Participación</h3>
-            <p>Impulsamos espacios donde las juventudes proponen, debaten y toman decisiones reales.</p>
-          </li>
-          <li>
-            <span class="pillar-icon" aria-hidden="true">🎓</span>
-            <h3>Formación</h3>
-            <p>Diseñamos talleres y mentorías que mezclan saberes técnicos con experiencias colaborativas.</p>
-          </li>
-          <li>
-            <span class="pillar-icon" aria-hidden="true">🎭</span>
-            <h3>Cultura</h3>
-            <p>Habitamos la cultura con festivales, muestras y proyectos artísticos que amplifican voces locales.</p>
-          </li>
-          <li>
-            <span class="pillar-icon" aria-hidden="true">🌱</span>
-            <h3>Comunidad</h3>
-            <p>Tejemos redes con organizaciones, escuelas y barrios para sostener iniciativas con impacto.</p>
-          </li>
-        </ul>
       </div>
     </section>
 
@@ -214,19 +167,6 @@
     </section>
 
 
-    <section id="coberturas" class="section muted">
-      <div class="container">
-        <h2>Coberturas</h2>
-        <p>Galería de fotos de actividades, marchas y eventos.</p>
-        <div class="masonry">
-          <img src="assets/img/coberturas/01.jpg" alt="Cobertura 1">
-          <img src="assets/img/coberturas/02.jpg" alt="Cobertura 2">
-          <img src="assets/img/coberturas/03.jpg" alt="Cobertura 3">
-          <img src="assets/img/coberturas/04.jpg" alt="Cobertura 4">
-        </div>
-      </div>
-    </section>
-
     <section id="blog" class="section">
       <div class="container two-col">
         <div>
@@ -236,6 +176,19 @@
         </div>
         <div class="photo-box">
           <img src="assets/img/blog/cover.jpg" alt="Imagen del Blog / Substack">
+        </div>
+      </div>
+    </section>
+
+    <section id="coberturas" class="section muted">
+      <div class="container">
+        <h2>Coberturas</h2>
+        <p>Galería de fotos de actividades, marchas y eventos.</p>
+        <div class="masonry">
+          <img src="assets/img/coberturas/01.jpg" alt="Cobertura 1">
+          <img src="assets/img/coberturas/02.jpg" alt="Cobertura 2">
+          <img src="assets/img/coberturas/03.jpg" alt="Cobertura 3">
+          <img src="assets/img/coberturas/04.jpg" alt="Cobertura 4">
         </div>
       </div>
     </section>
