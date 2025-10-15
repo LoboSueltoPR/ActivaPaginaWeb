@@ -467,6 +467,21 @@ a{color:inherit; text-decoration:none}
   display:flex;
   align-items:stretch;
 }
+.slide-link{
+  display:flex;
+  flex-direction:column;
+  width:100%;
+  height:100%;
+  color:inherit;
+  text-decoration:none;
+  border-radius:18px;
+  overflow:hidden;
+}
+.slide-link:focus-visible{
+  outline:3px solid var(--primary);
+  outline-offset:4px;
+  border-radius:18px;
+}
 .carousel .slide{height:100%;}
 .slide img{
   flex:1;
