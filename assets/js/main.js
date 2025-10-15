@@ -52,7 +52,7 @@ nav?.querySelectorAll('a').forEach(link => {
 });
 
 window.addEventListener('resize', () => {
-  if(window.innerWidth > 820){
+  if(window.innerWidth > 860){
     setMenuState(false);
   }
 });
