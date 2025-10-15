@@ -20,6 +20,20 @@
         <a class="page-link" data-transition href="../index.html#quienes">Quiénes somos</a>
         <a class="page-link" data-transition href="../index.html#agenda">Agenda</a>
         <a class="page-link" data-transition href="../index.html#contacto">Contacto</a>
+        <div class="socials">
+          <a href="#" aria-label="Instagram" title="Instagram">
+            <span aria-hidden="true">IG</span>
+            <img src="../assets/img/redes/instagram.png" alt="" loading="lazy" onerror="this.style.display='none'" />
+          </a>
+          <a href="#" aria-label="YouTube" title="YouTube">
+            <span aria-hidden="true">YT</span>
+            <img src="../assets/img/redes/youtube.png" alt="" loading="lazy" onerror="this.style.display='none'" />
+          </a>
+          <a href="#" aria-label="Spotify" title="Spotify">
+            <span aria-hidden="true">SP</span>
+            <img src="../assets/img/redes/spotify.png" alt="" loading="lazy" onerror="this.style.display='none'" />
+          </a>
+        </div>
       </nav>
       <button class="hamburger" id="hamburger" aria-label="Abrir menú">&#9776;</button>
     </div>
@@ -55,41 +69,32 @@
     <section class="section muted">
       <div class="container">
         <h3>Listado</h3>
-        <ul class="projects-tree">
-          <li>
-            <a class="page-link" data-transition data-return-hash="#proyectos" href="activa-45.html" title="Activá 45’">Activá 45’</a>
-          </li>
-          <li>
-            <a class="page-link" data-transition data-return-hash="#proyectos" href="activa-barrio.html" title="Activá tu barrio">Activá tu barrio</a>
-            <ul>
-              <li>
-                <a class="page-link" data-transition data-return-hash="#proyectos" href="activa-barrio.html#alfabetizacion" title="Proyecto de alfabetización">Proyecto de alfabetización</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a class="page-link" data-transition data-return-hash="#proyectos" href="club-espectadores.html" title="Club de espectadores">Club de espectadores</a>
-          </li>
-          <li>
-            <a class="page-link" data-transition data-return-hash="#proyectos" href="festival-word.html" title="Festival de rap - Word">Festival de rap - Word</a>
-            <ul>
-              <li>
-                <a class="page-link" data-transition data-return-hash="#proyectos" href="festival-word.html#ediciones-anteriores" title="Ediciones anteriores">Ediciones anteriores</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a class="page-link" data-transition data-return-hash="#proyectos" href="videoclips.html" title="Activá videoclips">Activá videoclips</a>
-          </li>
-          <li>
-            <a class="page-link" data-transition data-return-hash="#proyectos" href="foro.html" title="Foro de debate joven">Foro de debate joven</a>
-            <ul>
-              <li><a class="page-link" data-transition data-return-hash="#proyectos" href="foro.html#edicion-1" title="Foro de debate joven · 1era edición">1era edición</a></li>
-              <li><a class="page-link" data-transition data-return-hash="#proyectos" href="foro.html#edicion-2" title="Foro de debate joven · 2da edición">2da edición</a></li>
-              <li><a class="page-link" data-transition data-return-hash="#proyectos" href="foro.html#edicion-3" title="Foro de debate joven · 3ra edición">3ra edición</a></li>
-            </ul>
-          </li>
-        </ul>
+        <div class="projects-gallery" role="list">
+          <a class="project-card page-link" role="listitem" data-transition data-return-hash="#proyectos" href="activa-45.html" title="Activá 45’">
+            <img src="../assets/img/proyectos/activa-45.jpg" alt="Activá 45’" loading="lazy" />
+            <span>Activá 45’</span>
+          </a>
+          <a class="project-card page-link" role="listitem" data-transition data-return-hash="#proyectos" href="activa-barrio.html" title="Activá tu barrio">
+            <img src="../assets/img/proyectos/activa-barrio.jpg" alt="Activá tu barrio" loading="lazy" />
+            <span>Activá tu barrio</span>
+          </a>
+          <a class="project-card page-link" role="listitem" data-transition data-return-hash="#proyectos" href="club-espectadores.html" title="Club de espectadores">
+            <img src="../assets/img/proyectos/club-espectadores.jpg" alt="Club de espectadores" loading="lazy" />
+            <span>Club de espectadores</span>
+          </a>
+          <a class="project-card page-link" role="listitem" data-transition data-return-hash="#proyectos" href="festival-word.html" title="Festival de rap - Word">
+            <img src="../assets/img/proyectos/festival-word.jpg" alt="Festival de rap - Word" loading="lazy" />
+            <span>Festival de rap · Word</span>
+          </a>
+          <a class="project-card page-link" role="listitem" data-transition data-return-hash="#proyectos" href="videoclips.html" title="Activá videoclips">
+            <img src="../assets/img/videoclips/01.jpg" alt="Activá videoclips" loading="lazy" />
+            <span>Activá videoclips</span>
+          </a>
+          <a class="project-card page-link" role="listitem" data-transition data-return-hash="#proyectos" href="foro.html" title="Foro de debate joven">
+            <img src="../assets/img/proyectos/foro.jpg" alt="Foro de debate joven" loading="lazy" />
+            <span>Foro de debate joven</span>
+          </a>
+        </div>
       </div>
     </section>
   </main>
