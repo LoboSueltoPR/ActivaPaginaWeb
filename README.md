@@ -1,39 +1,49 @@
 # Estructura del proyecto
 
 ```
-activa-site/
+ActivaPaginaWeb/
 ├─ index.html
+├─ quienes-somos.html
+├─ proyectos/
+│  ├─ index.html
+│  ├─ activa-45.html
+│  ├─ activa-barrio.html
+│  ├─ club-espectadores.html
+│  ├─ festival-word.html
+│  ├─ foro.html
+│  └─ videoclips.html
 └─ assets/
    ├─ css/
    │  └─ styles.css
    ├─ js/
    │  └─ main.js
    └─ img/
-      ├─ logos/            (logos de la marca; ej: logo.svg, logo-alt.png)
-      ├─ noticias/         (fotos para el carrusel principal de noticias: 01.jpg, 02.jpg, 03.jpg, ...)
-      ├─ activa/           (fotos institucionales: grupo.jpg, equipo.jpg, organigrama.png)
-      ├─ proyectos/        (covers de cada proyecto: activa-45.jpg, activa-barrio.jpg, alfabetizacion.jpg, club-espectadores.jpg, festival-word.jpg)
-      ├─ ediciones/        (imágenes de “Ediciones anteriores”: cover.jpg, etc.)
-      ├─ videoclips/       (thumbnails para el carrusel secundario: 01.jpg, 02.jpg, 03.jpg)
-      ├─ coberturas/       (fotos de coberturas/eventos: 01.jpg, 02.jpg, 03.jpg, 04.jpg, ...)
-      └─ blog/             (imagen de portada del blog: cover.jpg)
+      ├─ activa/        (fotos institucionales: grupo.jpg, equipo.jpg, organigrama.png)
+      ├─ blog/          (portadas para notas y artículos)
+      ├─ coberturas/    (galerías estilo masonry de eventos)
+      ├─ ediciones/     (imágenes para "Ediciones anteriores")
+      ├─ logos/         (variantes del logo: logo.svg, logo-alt.png)
+      ├─ noticias/      (slides del hero principal: 01.jpg, 02.jpg, 03.jpg, ...)
+      ├─ proyectos/     (covers de cada proyecto destacado en el home)
+      ├─ redes/         (iconos de redes sociales: instagram.png, youtube.png, spotify.png)
+      └─ videoclips/    (thumbnails y fotos de apoyo para esta sección)
 ```
 
 ## Dónde reemplazar imágenes
 - **Carrusel principal**: `assets/img/noticias/01.jpg`, `02.jpg`, `03.jpg`.
 - **Bloque Activá (foto grupal)**: `assets/img/activa/grupo.jpg`.
-- **Tarjetas**: `assets/img/proyectos/cover.jpg`, `assets/img/coberturas/cover.jpg`, `assets/img/blog/cover.jpg`.
-- **Proyectos**: cambiar las imágenes en `assets/img/proyectos/*`.
+- **Tarjetas de proyectos**: `assets/img/proyectos/*.jpg`.
 - **Organigrama**: `assets/img/activa/organigrama.png`.
-- **Coberturas (masonry)**: agregar más JPGs en `assets/img/coberturas/`.
-- **Videoclips (carrusel)**: `assets/img/videoclips/01.jpg`, etc.
+- **Coberturas (masonry)**: sumar o reemplazar imágenes en `assets/img/coberturas/`.
+- **Videoclips**: usar las piezas en `assets/img/videoclips/` como fondos o covers.
+- **Redes sociales**: iconos disponibles en `assets/img/redes/`.
 
-## Contenido y categorías
-El home ya incluye accesos a:
-- Quiénes somos · Organigrama · Historia · Pilares fundamentales
-- Proyectos (Activá 45’, Activá tu barrio, Proyecto de alfabetización, Club de espectadores, Festival de rap - Word, Ediciones anteriores, Activá videoclips, Foro de debate joven)
-- Ediciones (1era/2da/3ra)
-- Blog → Substack
-- Coberturas
+## Contenido y secciones
+El sitio incluye accesos directos a:
+- Quiénes somos · Organigrama · Historia · Pilares fundamentales.
+- Proyectos (Activá 45’, Activá tu barrio, Proyecto de alfabetización, Club de espectadores, Festival de rap - Word, Ediciones anteriores, Activá videoclips, Foro de debate joven).
+- Ediciones (1era / 2da / 3ra).
+- Blog → Substack.
+- Coberturas.
 
-> El botón **“Ver más”** del bloque Activá te lleva a la sección “Quiénes somos”. Podés ajustar enlaces según tengas páginas internas.
+> El botón **“Ver más”** del bloque Activá lleva a la sección “Quiénes somos”. Ajustá los enlaces según las páginas internas que tengas publicadas.
