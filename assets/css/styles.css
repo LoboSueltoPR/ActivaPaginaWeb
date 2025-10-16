@@ -933,3 +933,278 @@ a{color:inherit; text-decoration:none}
   opacity: 0;
   transition: opacity .22s ease;
 }
+
+/* ====== Videoclips ====== */
+.video-intro .section-heading{
+  max-width:720px;
+  margin-inline:auto;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+.video-intro .section-heading p{
+  margin:0;
+  color:rgba(29,31,35,.78);
+}
+
+.video-archive-layout{
+  display:grid;
+  grid-template-columns:minmax(0, 2.1fr) minmax(260px, 1fr);
+  gap:32px;
+  align-items:start;
+}
+
+.video-list{
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+}
+
+.video-entry{
+  background:var(--surface);
+  border:1px solid rgba(15,23,42,.08);
+  border-radius:20px;
+  box-shadow:0 14px 30px rgba(15,23,42,.06);
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+}
+
+.video-entry--featured{
+  border-color:rgba(30,136,229,.3);
+  box-shadow:0 18px 34px rgba(30,136,229,.12);
+}
+
+.video-entry__media{
+  position:relative;
+  aspect-ratio:16/9;
+  width:100%;
+  background:var(--muted);
+  overflow:hidden;
+}
+
+.video-entry__media iframe{
+  width:100%;
+  height:100%;
+  border:0;
+}
+
+.video-entry__placeholder{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  text-align:center;
+  padding:24px;
+  color:rgba(29,31,35,.78);
+  background:linear-gradient(135deg, rgba(238,241,246,.96), rgba(238,241,246,.7));
+}
+
+.video-entry__placeholder span{
+  font-weight:600;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  font-size:.76rem;
+}
+
+.video-entry__placeholder code{
+  font-family:"Fira Code", "Source Code Pro", monospace;
+  font-size:.78rem;
+  background:rgba(15,23,42,.08);
+  color:var(--text);
+  padding:6px 10px;
+  border-radius:10px;
+}
+
+.video-entry--featured .video-entry__media{
+  background:linear-gradient(135deg, rgba(30,136,229,.9), rgba(21,101,192,.85));
+}
+
+.video-entry--featured .video-entry__placeholder{
+  color:#fff;
+  background:rgba(15,23,42,.28);
+}
+
+.video-entry--featured .video-entry__placeholder code{
+  background:rgba(255,255,255,.2);
+  color:#fff;
+}
+
+.video-entry__body{
+  padding:24px;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+.video-entry__tag{
+  display:inline-flex;
+  align-self:flex-start;
+  padding:5px 12px;
+  border-radius:999px;
+  background:rgba(30,136,229,.12);
+  color:var(--primary-600);
+  font-size:.75rem;
+  font-weight:600;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.video-entry--featured .video-entry__tag{
+  background:rgba(255,255,255,.2);
+  color:#fff;
+}
+
+.video-entry__meta{
+  margin:0;
+  padding:0;
+  list-style:none;
+  display:grid;
+  gap:6px;
+  color:rgba(29,31,35,.78);
+}
+
+.video-entry__actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.video-entry__actions .btn{
+  box-shadow:none;
+}
+
+.video-entry__media-group{
+  display:grid;
+  gap:12px;
+  padding:24px 24px 0;
+  grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.video-entry__media--mini{
+  aspect-ratio:16/9;
+  border-radius:12px;
+  overflow:hidden;
+  background:var(--muted);
+}
+
+.video-entry__media--mini .video-entry__placeholder{
+  position:static;
+  height:100%;
+  border-radius:12px;
+}
+
+.video-entry__playlist{
+  margin:0;
+  padding-left:18px;
+  display:grid;
+  gap:8px;
+  color:rgba(29,31,35,.8);
+}
+
+.video-entry__playlist-title{
+  font-weight:600;
+}
+
+.video-entry__playlist-note{
+  display:block;
+  font-size:.88rem;
+  color:rgba(29,31,35,.62);
+}
+
+.video-entry--upcoming{
+  background:var(--muted);
+  border-style:dashed;
+  border-color:rgba(15,23,42,.12);
+  box-shadow:none;
+}
+
+.video-entry__date{
+  margin:0;
+  font-weight:600;
+  color:var(--primary-600);
+}
+
+.video-sidebar{
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+}
+
+.artist-card{
+  background:var(--surface);
+  border:1px solid rgba(15,23,42,.08);
+  border-radius:18px;
+  padding:24px;
+  box-shadow:0 12px 24px rgba(15,23,42,.06);
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.artist-card--embed{
+  position:sticky;
+  top:108px;
+}
+
+.instagram-placeholder{
+  border:1px dashed rgba(30,136,229,.35);
+  border-radius:14px;
+  padding:18px;
+  min-height:200px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:rgba(30,136,229,.08);
+  color:var(--primary-600);
+}
+
+.instagram-placeholder code{
+  font-family:"Fira Code", "Source Code Pro", monospace;
+  font-size:.78rem;
+}
+
+.artist-note{
+  margin:0;
+  font-size:.92rem;
+  color:rgba(29,31,35,.7);
+}
+
+.artist-tips{
+  margin:0;
+  padding-left:18px;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.artist-tips li{
+  margin:0;
+}
+
+@media (max-width:1080px){
+  .video-archive-layout{grid-template-columns:1.7fr 1fr;}
+}
+
+@media (max-width:920px){
+  .video-archive-layout{grid-template-columns:1fr;}
+  .artist-card--embed{position:static;}
+}
+
+@media (max-width:640px){
+  .video-entry__body{padding:20px;}
+  .video-entry__media-group{padding:20px 20px 0;}
+}
+
+@media (prefers-reduced-motion: reduce){
+  .video-entry,
+  .instagram-placeholder{
+    transition:none;
+  }
+}

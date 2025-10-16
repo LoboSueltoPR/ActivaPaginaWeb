@@ -48,17 +48,119 @@
       </div>
     </section>
 
-    <section class="section">
-      <div class="container two-col">
-        <div>
-          <h3>Descripción</h3>
-          <p>Producciones audiovisuales y videoclips de los proyectos.</p>
-          <p class="work-in-progress">Estamos trabajando para usted para poder subir todo lo antes posible.</p>
-          <a class="btn page-link" data-transition data-return-hash="#proyectos" href="../index.html">Volver al inicio</a>
+    <section class="section section--surface video-intro">
+      <div class="container">
+        <div class="section-heading">
+          <h3>Videoclips hechos en el espacio</h3>
+          <p>Este archivo reúne los estrenos y registros que producimos junto a las y los artistas que pasan por Activá. Podés reemplazar los bloques por iframes de YouTube o Vimeo manteniendo la relación 16:9 para que respondan bien en celular.</p>
+          <p>Dejamos plantillas sobrias para destacar lanzamientos, ordenar sesiones en vivo y anticipar próximos estrenos. Completá títulos, descripciones y enlaces según corresponda, duplicando las tarjetas que necesites para nuevos videoclips.</p>
         </div>
-        <div class="photo-box">
-          <img src="../assets/img/videoclips/01.jpg" alt="Activá videoclips imagen">
+      </div>
+    </section>
+
+    <section class="section section--muted video-archive">
+      <div class="container video-archive-layout">
+        <div class="video-list">
+          <article class="video-entry video-entry--featured">
+            <div class="video-entry__media">
+              <div class="video-entry__placeholder">
+                <span>Embed destacado</span>
+                <p>Reemplazá este bloque por el iframe del lanzamiento principal.</p>
+                <code>&lt;iframe src="https://www.youtube.com/embed/ID" title="Nombre del videoclip" allowfullscreen&gt;&lt;/iframe&gt;</code>
+              </div>
+            </div>
+            <div class="video-entry__body">
+              <p class="video-entry__tag">Estreno destacado</p>
+              <h3>Nombre del videoclip</h3>
+              <p>Un párrafo breve para contar el concepto, locación o invitados especiales del estreno.</p>
+              <ul class="video-entry__meta">
+                <li><strong>Artista:</strong> Nombre del artista</li>
+                <li><strong>Dirección:</strong> Equipo audiovisual Activá</li>
+                <li><strong>Fecha de publicación:</strong> dd/mm/aaaa</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="video-entry">
+            <div class="video-entry__media">
+              <div class="video-entry__placeholder">
+                <span>Embed del videoclip</span>
+                <p>Pegá acá el código que genera YouTube o Vimeo. También podés reemplazar el fondo por un frame desde <code>assets/img/videoclips/</code>.</p>
+              </div>
+            </div>
+            <div class="video-entry__body">
+              <h3>Título del tema</h3>
+              <p>Descripción corta con datos del rodaje, la sesión o la colaboración.</p>
+              <div class="video-entry__actions">
+                <a class="btn outline" href="https://www.youtube.com/watch?v=VIDEO_ID" target="_blank" rel="noopener noreferrer">Ver en YouTube</a>
+                <a class="btn outline" href="#" target="_blank" rel="noopener noreferrer">Ficha técnica</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="video-entry">
+            <div class="video-entry__media-group">
+              <div class="video-entry__media video-entry__media--mini">
+                <div class="video-entry__placeholder">
+                  <span>Video 01</span>
+                  <p>Ideal para sesiones live o backstage.</p>
+                </div>
+              </div>
+              <div class="video-entry__media video-entry__media--mini">
+                <div class="video-entry__placeholder">
+                  <span>Video 02</span>
+                  <p>Duplicá este bloque para sumar más piezas.</p>
+                </div>
+              </div>
+            </div>
+            <div class="video-entry__body">
+              <p class="video-entry__tag">Sesiones en vivo</p>
+              <h3>Nombre del ciclo o serie</h3>
+              <p>Usá esta plantilla para agrupar varias versiones live, acústicas o remixes. Podés listar los temas incluidos abajo.</p>
+              <ol class="video-entry__playlist">
+                <li>
+                  <span class="video-entry__playlist-title">Tema 1 · Artista invitado</span>
+                  <span class="video-entry__playlist-note">YouTube · dd/mm/aaaa</span>
+                </li>
+                <li>
+                  <span class="video-entry__playlist-title">Tema 2 · Sesión en estudio</span>
+                  <span class="video-entry__playlist-note">YouTube · dd/mm/aaaa</span>
+                </li>
+              </ol>
+            </div>
+          </article>
+
+          <article class="video-entry video-entry--upcoming">
+            <div class="video-entry__body">
+              <p class="video-entry__tag">En producción</p>
+              <h3>Próximo lanzamiento</h3>
+              <p>Reservá este espacio para anunciar el siguiente videoclip y mantener actualizada la agenda de estrenos.</p>
+              <p class="video-entry__date">Estreno estimado: <strong>mes / año</strong></p>
+            </div>
+          </article>
         </div>
+
+        <aside class="video-sidebar">
+          <div class="artist-card artist-card--embed">
+            <h4>Instagram del artista</h4>
+            <p>Copiá el código de inserción de Instagram y pegalo dentro de este recuadro para mostrar un post, reel o carrusel destacado.</p>
+            <div class="instagram-placeholder" aria-label="Espacio para incrustar Instagram">
+              <code>&lt;blockquote class="instagram-media" ...&gt;&lt;/blockquote&gt;</code>
+            </div>
+            <p class="artist-note">Recomendamos activar “Mostrar título” y “Tema claro” para que combine con la estética del sitio.</p>
+          </div>
+
+          <div class="artist-card">
+            <h4>Checklist rápido</h4>
+            <ul class="artist-tips">
+              <li>Verificá miniaturas y textos tanto en escritorio como en celular.</li>
+              <li>Sumá subtítulos o lyrics si están disponibles.</li>
+              <li>Incluí enlaces a plataformas de streaming en la descripción.</li>
+            </ul>
+          </div>
+
+          <a class="btn outline page-link" data-transition data-return-hash="#proyectos" href="../index.html">Volver al inicio</a>
+        </aside>
       </div>
     </section>
   </main>
