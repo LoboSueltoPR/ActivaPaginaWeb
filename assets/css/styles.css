@@ -47,8 +47,8 @@ body.menu-open{overflow:hidden;}
   width:100%;
   height:100%;
   object-fit:cover;
-  object-position:center 36%;
-  transform:scale(1.035);
+  object-position:center 18%;
+  transform:none;
   filter:saturate(1.08);
   z-index:0;
 }
@@ -100,7 +100,7 @@ body.menu-open{overflow:hidden;}
   display:inline-block;
   font-weight:800;
   letter-spacing:.16em;
-  text-transform:inherit;
+  text-transform:none;
 }
 
 .welcome-hero__content p{
@@ -202,13 +202,13 @@ body.menu-open{overflow:hidden;}
 
 @media (max-width:720px){
   .welcome-hero{
-    padding:clamp(28px, 12vh, 72px) 18px clamp(48px, 14vh, 96px);
+    padding:clamp(40px, 16vh, 88px) 18px clamp(48px, 14vh, 96px);
     align-items:flex-start;
     justify-content:flex-start;
   }
 
   .welcome-hero__content{
-    margin:clamp(8px, 6vh, 28px) auto auto;
+    margin:clamp(18px, 12vh, 44px) auto auto;
     padding:0;
     text-align:center;
     gap:clamp(12px, 4vw, 22px);
@@ -217,7 +217,7 @@ body.menu-open{overflow:hidden;}
   .welcome-hero__content h1,
   .welcome-hero__content p{max-width:28ch; margin-inline:auto;}
 
-  .welcome-hero__photo{object-position:center 24%;}
+  .welcome-hero__photo{object-position:center top;}
 
   .welcome-hero__cta{margin-inline:auto; align-self:center;}
 
