@@ -53,6 +53,13 @@ body.menu-open{overflow:hidden;}
   z-index:0;
 }
 
+@media (min-width:1024px){
+  .welcome-hero__photo{
+    object-position:center 48%;
+    transform:scale(1.05);
+  }
+}
+
 .welcome-hero::after{
   content:"";
   position:absolute;
