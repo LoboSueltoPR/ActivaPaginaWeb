@@ -178,7 +178,13 @@ document.getElementById('year').textContent = new Date().getFullYear();
 // --- Simple page fade transition ---
 (function(){
   const body = document.body;
+  function clearExitState(){
+    body.classList.remove('page-fade-exit', 'page-fade-exit-active');
+  }
+
   function enter(){
+    clearExitState();
+    body.classList.remove('page-fade-enter-active');
     body.classList.add('page-fade-enter');
     requestAnimationFrame(()=>{
       body.classList.add('page-fade-enter-active');
@@ -193,6 +199,13 @@ document.getElementById('year').textContent = new Date().getFullYear();
     setTimeout(()=>{ window.location.href = href; }, 220);
   }
   enter();
+  window.addEventListener('pageshow', (event) => {
+    if(event.persisted || window.performance?.getEntriesByType('navigation')?.[0]?.type === 'back_forward'){
+      enter();
+    } else {
+      clearExitState();
+    }
+  });
   document.addEventListener('click', (e)=>{
     const a = e.target.closest('a[data-transition]');
     if(!a) return;
