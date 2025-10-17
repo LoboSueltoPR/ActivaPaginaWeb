@@ -8,12 +8,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" type="image/png" href="assets/img/logos/activa.png">
 </head>
 <body>
   <section class="welcome-hero" id="bienvenida">
     <img class="welcome-hero__photo" src="assets/img/activa/grupo.jpg" alt="Integrantes de Activá reunidos" />
     <div class="welcome-hero__content">
-      <h1 id="bienvenida-titulo">MEJOR QUE DECIR, <span class="welcome-hero__highlight">ES HACER.</span></h1>
+      <h1 id="bienvenida-titulo">MEJOR QUE DECIR <span class="welcome-hero__highlight">ES HACER</span></h1>
       <a class="welcome-hero__cta" href="#contenido" aria-describedby="bienvenida-titulo">Entrar</a>
     </div>
     <div class="welcome-hero__hint" aria-hidden="true">
@@ -25,7 +26,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#bienvenida">
-        <img src="assets/img/logos/logo.svg" alt="Logo Activá" onerror="this.style.display='none'">
+        <img src="assets/img/logos/logo.png" alt="Logo Activá" onerror="this.style.display='none'">
       </a>
       <button class="hamburger" id="hamburger" type="button" aria-label="Abrir menú" aria-controls="mainNav" aria-expanded="false">☰</button>
       <nav class="main-nav" id="mainNav">
@@ -55,7 +56,17 @@
         <div class="carousel" id="heroCarousel" aria-roledescription="carousel">
           <div class="carousel-track">
             <article class="slide is-active">
-              <img src="assets/img/noticias/04.jpg" alt="Noticia destacada 1" />
+               <a class="slide-link page-link" data-transition data-return-hash="#novedades" href="#blog" title="Activá Entrevistas">
+                  <img src="assets/img/noticias/05.jpg" alt="Noticia destacada 1" />
+                  <div class="slide-caption">
+                  <h2>"A 80 años del 17 de octubre..."</h2>
+                  <p>Leé el ensayo de Antonia Romano</p>
+                  </div>
+              </a>
+            </article>
+            
+            <article class="slide is-active">
+              <img src="assets/img/noticias/04.jpg" alt="Noticia destacada 2" />
               <div class="slide-caption">
                 <h2>Chipi Chipi - Festival homenaje a Charly García</h2>
                 <p>Entrada libre y gratuita</p>
@@ -63,7 +74,7 @@
             </article>
             <article class="slide is-active">
               <a class="slide-link page-link" data-transition data-return-hash="#novedades" href="https://youtu.be/a3AHw2XESXA?si=HLF-uaM73BB6Wdrq " title="Activá Entrevistas">
-              <img src="assets/img/noticias/01.jpg" alt="Noticia destacada 1"/>
+              <img src="assets/img/noticias/01.jpg" alt="Noticia destacada 3"/>
               <div class="slide-caption">
                 <h2>Entrevista Lala Pasquinelli</h2>
                 <p>¡Clickeá acá para ir a ver la entrevista!</p>
@@ -72,7 +83,7 @@
             </article>
             <article class="slide">
               <a class="slide-link page-link" data-transition data-return-hash="#novedades" href="#coberturas" title="Coberturas Activá">
-                <img src="assets/img/noticias/02.jpg" alt="Noticia destacada 2" />
+                <img src="assets/img/noticias/02.jpg" alt="Noticia destacada 4" />
                 <div class="slide-caption">
                   <h2>Cobertura marcha por el triple femicidio</h2>
                   <p></p>
@@ -147,7 +158,7 @@
           </a>
           <a class="project-card page-link" role="listitem" data-transition data-return-hash="#proyectos" href="proyectos/club-espectadores.html" title="Club de espectadores">
             <img src="assets/img/proyectos/club-espectadores.jpg" alt="Club de espectadores" loading="lazy" />
-            <span>Club de espectadores</span>
+            <span>Club de Espectadores</span>
           </a>
           <a class="project-card page-link" role="listitem" data-transition data-return-hash="#proyectos" href="proyectos/festival-word.html" title="Festival de rap - Word">
             <img src="assets/img/proyectos/festival-word.jpg" alt="Festival de rap - Word" loading="lazy" />
@@ -169,7 +180,7 @@
       <div class="container two-col">
         <div>
           <h2>Blog · Substack</h2>
-          <div class="substack-post-embed"><p lang="en">test</p><p> - Activá</p><a data-comment-link href="https://substack.com/@activaav/note/c-166673261">Read on Substack</a></div><script async src="https://substack.com/embedjs/embed.js" charset="utf-8"></script>
+          <div class="substack-post-embed"><p lang="en">A 80 años del 17 de Octubre: de “la causa del pueblo” al sueño individualista by Activá</p><p>¿Estamos perdiendo las identidades colectivas?</p><a data-post-link href="https://activaav.substack.com/p/a-80-anos-del-17-de-octubre-de-la">Read on Substack</a></div><script async src="https://substack.com/embedjs/embed.js" charset="utf-8"></script>
         </div>
         <div class="photo-box">
           <img src="assets/img/blog/cover.jpg" alt="Imagen del Blog / Substack">

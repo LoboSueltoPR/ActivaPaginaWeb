@@ -7,13 +7,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/img/logos/activa.png">
   <link rel="stylesheet" href="../assets/css/styles.css" onerror="this.href='../styles.css'"/>
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand page-link" data-transition data-return-hash="#bienvenida" href="../index.html">
-        <img src="../assets/img/logos/logo.svg" alt="Logo Activá" onerror="this.style.display='none'">
+        <img src="../assets/img/logos/logo.png" alt="Logo Activá" onerror="this.style.display='none'">
       </a>
       <button class="hamburger" id="hamburger" type="button" aria-label="Abrir menú" aria-controls="mainNav" aria-expanded="false">☰</button>
       <nav class="main-nav" id="mainNav">
@@ -52,8 +53,9 @@
       <div class="container">
         <div class="section-heading">
           <h3>Videoclips hechos en el espacio</h3>
-          <p>Este archivo reúne los estrenos y registros que producimos junto a las y los artistas que pasan por Activá. Podés reemplazar los bloques por iframes de YouTube o Vimeo manteniendo la relación 16:9 para que respondan bien en celular.</p>
-          <p>Dejamos plantillas sobrias para destacar lanzamientos, ordenar sesiones en vivo y anticipar próximos estrenos. Completá títulos, descripciones y enlaces según corresponda, duplicando las tarjetas que necesites para nuevos videoclips.</p>
+          <p><strong>Activá Videoclips</strong> es un programa del área de Cultura que se lanzó en 2024 para acompañar el crecimiento artístico y profesional de las escenas locales.</p>
+          <p>Detectamos que para muches artistas independientes resulta difícil acceder a grabaciones profesionales y a piezas audiovisuales que amplifiquen ese trabajo. Por eso, desde Activá Cultura armamos un equipo de producción para encargarnos del guion, rodaje y edición de <strong>10 videoclips sin costo</strong> para quienes se inscribieron en la convocatoria abierta.</p>
+          <p>En esta primera entrega trabajamos junto a Slow, LilWendd, Francolop, Serafín, Jeremías Vibración, Andr0, Emanuel Tejerina, Nicolás Tauro y Grover para conocer sus proyectos, recorridos y demandas. Acá reunimos los estrenos publicados hasta el momento.</p>
         </div>
       </div>
     </section>
@@ -61,106 +63,174 @@
     <section class="section section--muted video-archive">
       <div class="container video-archive-layout">
         <div class="video-list">
-          <article class="video-entry video-entry--featured">
-            <div class="video-entry__media">
-              <div class="video-entry__placeholder">
-                <span>Embed destacado</span>
-                <p>Reemplazá este bloque por el iframe del lanzamiento principal.</p>
-                <code>&lt;iframe src="https://www.youtube.com/embed/ID" title="Nombre del videoclip" allowfullscreen&gt;&lt;/iframe&gt;</code>
+          <article class="video-pair">
+            <div class="video-pair__slot">
+              <p class="video-pair__tag">Estreno destacado</p>
+              <div class="embed embed--video">
+                <iframe src="https://www.youtube.com/embed/keBFSFa1C74" title="Emanuel Tejerina – Sesión Activá Videoclips" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <div class="video-pair__details">
+                <h3>Emanuel Tejerina – Sesión Activá Videoclips</h3>
+                <p>Una toma sensible que captura la calidez interpretativa de Emanuel Tejerina junto a su banda.</p>
               </div>
             </div>
-            <div class="video-entry__body">
-              <p class="video-entry__tag">Estreno destacado</p>
-              <h3>Nombre del videoclip</h3>
-              <p>Un párrafo breve para contar el concepto, locación o invitados especiales del estreno.</p>
-              <ul class="video-entry__meta">
-                <li><strong>Artista:</strong> Nombre del artista</li>
-                <li><strong>Dirección:</strong> Equipo audiovisual Activá</li>
-                <li><strong>Fecha de publicación:</strong> dd/mm/aaaa</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="video-entry">
-            <div class="video-entry__media">
-              <div class="video-entry__placeholder">
-                <span>Embed del videoclip</span>
-                <p>Pegá acá el código que genera YouTube o Vimeo. También podés reemplazar el fondo por un frame desde <code>assets/img/videoclips/</code>.</p>
-              </div>
-            </div>
-            <div class="video-entry__body">
-              <h3>Título del tema</h3>
-              <p>Descripción corta con datos del rodaje, la sesión o la colaboración.</p>
-              <div class="video-entry__actions">
-                <a class="btn outline" href="https://www.youtube.com/watch?v=VIDEO_ID" target="_blank" rel="noopener noreferrer">Ver en YouTube</a>
-                <a class="btn outline" href="#" target="_blank" rel="noopener noreferrer">Ficha técnica</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="video-entry">
-            <div class="video-entry__media-group">
-              <div class="video-entry__media video-entry__media--mini">
-                <div class="video-entry__placeholder">
-                  <span>Video 01</span>
-                  <p>Ideal para sesiones live o backstage.</p>
-                </div>
-              </div>
-              <div class="video-entry__media video-entry__media--mini">
-                <div class="video-entry__placeholder">
-                  <span>Video 02</span>
-                  <p>Duplicá este bloque para sumar más piezas.</p>
+            <div class="video-pair__slot video-pair__slot--social">
+              <div class="embed embed--instagram">
+                <div class="embed__placeholder">
+                  <span>Perfil en Instagram</span>
+                  <p class="social-handle">@emanueltejerinamusico</p>
+                  <p>Sumate a su comunidad y descubrí más sesiones en vivo.</p>
+                  <div class="video-pair__actions">
+                    <a class="btn outline" href="https://www.instagram.com/emanueltejerinamusico/" target="_blank" rel="noopener noreferrer">Abrir perfil</a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="video-entry__body">
-              <p class="video-entry__tag">Sesiones en vivo</p>
-              <h3>Nombre del ciclo o serie</h3>
-              <p>Usá esta plantilla para agrupar varias versiones live, acústicas o remixes. Podés listar los temas incluidos abajo.</p>
-              <ol class="video-entry__playlist">
-                <li>
-                  <span class="video-entry__playlist-title">Tema 1 · Artista invitado</span>
-                  <span class="video-entry__playlist-note">YouTube · dd/mm/aaaa</span>
-                </li>
-                <li>
-                  <span class="video-entry__playlist-title">Tema 2 · Sesión en estudio</span>
-                  <span class="video-entry__playlist-note">YouTube · dd/mm/aaaa</span>
-                </li>
-              </ol>
+          </article>
+
+          <article class="video-pair">
+            <div class="video-pair__slot">
+              <p class="video-pair__tag">Videoclip</p>
+              <div class="embed embed--video">
+                <iframe src="https://www.youtube.com/embed/qAT3uHIpjw8" title="LilWenDD – Activá Videoclips" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <div class="video-pair__details">
+                <h3>LilWenDD – Sesión Activá Videoclips</h3>
+                <p>Trap, barrio y crew: LilWenDD presenta su universo musical con barras afiladas y energía joven frente a la cámara.</p>
+              </div>
+            </div>
+            <div class="video-pair__slot video-pair__slot--social">
+              <div class="embed embed--instagram">
+                <div class="embed__placeholder">
+                  <span>Perfil en Instagram</span>
+                  <p class="social-handle">@lilwendd</p>
+                  <p>Seguí sus lanzamientos y encontrá adelantos exclusivos en su feed.</p>
+                  <div class="video-pair__actions">
+                    <a class="btn outline" href="https://www.instagram.com/lilwendd/" target="_blank" rel="noopener noreferrer">Abrir perfil</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </article>
 
-          <article class="video-entry video-entry--upcoming">
-            <div class="video-entry__body">
-              <p class="video-entry__tag">En producción</p>
-              <h3>Próximo lanzamiento</h3>
-              <p>Reservá este espacio para anunciar el siguiente videoclip y mantener actualizada la agenda de estrenos.</p>
-              <p class="video-entry__date">Estreno estimado: <strong>mes / año</strong></p>
+          <article class="video-pair">
+            <div class="video-pair__slot">
+              <p class="video-pair__tag">Videoclip</p>
+              <div class="embed embed--video">
+                <iframe src="https://www.youtube.com/embed/fw0e0dnrjuo" title="Franco Lop – CORRES" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <div class="video-pair__details">
+                <h3>Franco Lop – CORRES</h3>
+                <p>Texturas electrónicas y atmósferas urbanas que acompañan el pulso de la voz de Franco Lop.</p>
+              </div>
+            </div>
+            <div class="video-pair__slot video-pair__slot--social">
+              <div class="embed embed--instagram">
+                <div class="embed__placeholder">
+                  <span>Perfil en Instagram</span>
+                  <p class="social-handle">@francolop.7</p>
+                  <p>Conocé su recorrido y próximos estrenos desde su perfil oficial.</p>
+                  <div class="video-pair__actions">
+                    <a class="btn outline" href="https://www.instagram.com/francolop.7/" target="_blank" rel="noopener noreferrer">Abrir perfil</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </article>
-        </div>
 
-        <aside class="video-sidebar">
-          <div class="artist-card artist-card--embed">
-            <h4>Instagram del artista</h4>
-            <p>Copiá el código de inserción de Instagram y pegalo dentro de este recuadro para mostrar un post, reel o carrusel destacado.</p>
-            <div class="instagram-placeholder" aria-label="Espacio para incrustar Instagram">
-              <code>&lt;blockquote class="instagram-media" ...&gt;&lt;/blockquote&gt;</code>
+          <article class="video-pair">
+            <div class="video-pair__slot">
+              <p class="video-pair__tag">Videoclip</p>
+              <div class="embed embed--video">
+                <iframe src="https://www.youtube.com/embed/knjGKrfERUE" title="Slow León – Activá Videoclips" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <div class="video-pair__details">
+                <h3>Slow León – Sesión Activá Videoclips</h3>
+                <p>Un viaje íntimo que combina estudio y calle para resaltar la identidad de Slow León.</p>
+              </div>
             </div>
-            <p class="artist-note">Recomendamos activar “Mostrar título” y “Tema claro” para que combine con la estética del sitio.</p>
-          </div>
+            <div class="video-pair__slot video-pair__slot--social">
+              <div class="embed embed--instagram">
+                <div class="embed__placeholder">
+                  <span>Perfil en Instagram</span>
+                  <p class="social-handle">@slow.banda</p>
+                  <p>Descubrí ensayos, adelantos y la agenda en vivo desde sus historias.</p>
+                  <div class="video-pair__actions">
+                    <a class="btn outline" href="https://www.instagram.com/slow.banda/" target="_blank" rel="noopener noreferrer">Abrir perfil</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
 
-          <div class="artist-card">
-            <h4>Checklist rápido</h4>
-            <ul class="artist-tips">
-              <li>Verificá miniaturas y textos tanto en escritorio como en celular.</li>
-              <li>Sumá subtítulos o lyrics si están disponibles.</li>
-              <li>Incluí enlaces a plataformas de streaming en la descripción.</li>
-            </ul>
-          </div>
+          <article class="video-pair">
+            <div class="video-pair__slot">
+              <p class="video-pair__tag">Videoclip</p>
+              <div class="embed embed--video">
+                <iframe src="https://www.youtube.com/embed/VrWBTi4bVb8" title="Serafín Rap – Ataraxia" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <div class="video-pair__details">
+                <h3>Serafín Rap – Ataraxia</h3>
+                <p>Potencia vocal y narrativa visual que alterna estudio y exteriores cálidos.</p>
+              </div>
+            </div>
+            <div class="video-pair__slot video-pair__slot--social">
+              <div class="embed embed--instagram">
+                <div class="embed__placeholder">
+                  <span>Perfil en Instagram</span>
+                  <p class="social-handle">@serafin_rap</p>
+                  <p>Seguí las novedades del lanzamiento y material extra en su perfil.</p>
+                  <div class="video-pair__actions">
+                    <a class="btn outline" href="https://www.instagram.com/serafin_rap/" target="_blank" rel="noopener noreferrer">Abrir perfil</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
 
+          <article class="video-pair">
+            <div class="video-pair__slot">
+              <p class="video-pair__tag">Videoclip</p>
+              <div class="embed embed--video">
+                <iframe src="https://www.youtube.com/embed/Q3G13t28_FA" title="Grover – Activá Videoclips" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <div class="video-pair__details">
+                <h3>Grover – Activá Videoclips</h3>
+                <p>Funk y colores vibrantes que celebran la potencia de la escena local.</p>
+              </div>
+            </div>
+            <div class="video-pair__slot video-pair__slot--social">
+              <div class="embed embed--instagram">
+                <div class="embed__placeholder">
+                  <span>Perfil en Instagram</span>
+                  <p class="social-handle">@ill_fran</p>
+                  <p>Encontrá backstage, beats y contenido exclusivo del proyecto Grover.</p>
+                  <div class="video-pair__actions">
+                    <a class="btn outline" href="https://www.instagram.com/ill_fran/" target="_blank" rel="noopener noreferrer">Abrir perfil</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="video-pair video-pair--upcoming">
+            <div class="video-pair__slot">
+              <p class="video-pair__tag">En producción</p>
+              <div class="video-pair__details">
+                <h3>Próximos estrenos</h3>
+                <p>Estamos cerrando el último tramo del proyecto con los videoclips restantes del programa.</p>
+                <ul class="video-pair__meta">
+                  <li><strong>Jeremías Vibración:</strong> videoclip entregado, pronto online.</li>
+                  <li><strong>Andr0:</strong> material filmado, en etapa de render.</li>
+                  <li><strong>Nicolás Tauro:</strong> producción pendiente de iniciar, será el cierre del ciclo.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+        <div class="video-actions">
           <a class="btn outline page-link" data-transition data-return-hash="#proyectos" href="../index.html">Volver al inicio</a>
-        </aside>
+        </div>
       </div>
     </section>
   </main>
