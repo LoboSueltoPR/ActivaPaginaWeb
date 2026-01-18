@@ -170,6 +170,8 @@ function makeCarousel(rootId, dotsId){
 makeCarousel('heroCarousel','heroDots');
 makeCarousel('clipsCarousel','clipsDots');
 makeCarousel('coverageCarousel','coverageDots');
+makeCarousel('coverageCarousel2','coverageDots2');
+makeCarousel('coverageCarousel3','coverageDots3');
 
 // year
 document.getElementById('year').textContent = new Date().getFullYear();
