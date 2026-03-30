@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Activá · Cobertura 8 de Marzo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="icon" type="image/png" href="../assets/img/logos/activa.png">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand page-link" data-transition href="../index.html">
+        <img src="../assets/img/logos/logo.png" alt="Logo Activá" onerror="this.style.display='none'">
+      </a>
+      <button class="hamburger" id="hamburger" type="button" aria-label="Abrir menú" aria-controls="mainNav" aria-expanded="false">☰</button>
+      <nav class="main-nav" id="mainNav">
+        <a class="page-link" data-transition data-return-hash="#quienes" href="../index.html#quienes">Quiénes somos</a>
+        <a class="page-link" data-transition data-return-hash="#proyectos" href="../index.html#proyectos">Proyectos</a>
+        <a class="page-link" data-transition href="index.html">Coberturas</a>
+      </nav>
+    </div>
+    <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container two-col">
+        <div>
+          <h2>Marcha del 8 de Marzo</h2>
+          <p>
+            Cobertura fotográfica de la jornada del 8M. Acá compartimos algunas imágenes
+            de la movilización y de la participación de Activá.
+          </p>
+          <a class="btn page-link" data-transition href="index.html">Volver a Coberturas</a>
+        </div>
+        <div class="photo-box">
+          <img src="../assets/img/coberturas/8m/marcha (12).jpg" alt="Integrantes de Activá en la marcha del 8M" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--muted">
+      <div class="container">
+        <div class="section-heading"><h3>Galería en carrusel</h3></div>
+        <div class="carousel slim carousel--peek" id="coverageCarousel" aria-roledescription="carousel">
+          <div class="carousel-track">
+            <article class="slide is-active"><img src="../assets/img/coberturas/8m/marcha (1).jpg" alt="8M - Foto 1" loading="lazy" /></article>
+            <article class="slide"><img src="../assets/img/coberturas/8m/marcha (2).jpg" alt="8M - Foto 2" loading="lazy" /></article>
+            <article class="slide"><img src="../assets/img/coberturas/8m/marcha (3).jpg" alt="8M - Foto 3" loading="lazy" /></article>
+            <article class="slide"><img src="../assets/img/coberturas/8m/marcha (4).jpg" alt="8M - Foto 4" loading="lazy" /></article>
+            <article class="slide"><img src="../assets/img/coberturas/8m/marcha (5).jpg" alt="8M - Foto 5" loading="lazy" /></article>
+            <article class="slide"><img src="../assets/img/coberturas/8m/marcha (6).jpg" alt="8M - Foto 6" loading="lazy" /></article>
+            <article class="slide"><img src="../assets/img/coberturas/8m/marcha (7).jpg" alt="8M - Foto 7" loading="lazy" /></article>
+            <article class="slide"><img src="../assets/img/coberturas/8m/marcha (8).jpg" alt="8M - Foto 8" loading="lazy" /></article>
+            <article class="slide"><img src="../assets/img/coberturas/8m/marcha (9).jpg" alt="8M - Foto 9" loading="lazy" /></article>
+            <article class="slide"><img src="../assets/img/coberturas/8m/marcha (10).jpg" alt="8M - Foto 10" loading="lazy" /></article>
+            <article class="slide"><img src="../assets/img/coberturas/8m/marcha (11).jpg" alt="8M - Foto 11" loading="lazy" /></article>
+            <article class="slide"><img src="../assets/img/coberturas/8m/marcha (12).jpg" alt="8M - Foto 12" loading="lazy" /></article>
+          </div>
+          <button class="carousel-btn prev" data-dir="-1" aria-label="Anterior">‹</button>
+          <button class="carousel-btn next" data-dir="1" aria-label="Siguiente">›</button>
+          <div class="carousel-dots" id="coverageDots" aria-label="Indicadores del carrusel"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Activá. Todos los derechos reservados.</small>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
