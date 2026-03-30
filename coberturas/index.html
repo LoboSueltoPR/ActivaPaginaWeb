@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Activá · Coberturas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="icon" type="image/png" href="../assets/img/logos/activa.png">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand page-link" data-transition data-return-hash="#coberturas" href="../index.html">
+        <img src="../assets/img/logos/logo.png" alt="Logo Activá" onerror="this.style.display='none'">
+      </a>
+      <button class="hamburger" id="hamburger" type="button" aria-label="Abrir menú" aria-controls="mainNav" aria-expanded="false">☰</button>
+      <nav class="main-nav" id="mainNav">
+        <a class="page-link" data-transition data-return-hash="#quienes" href="../index.html#quienes">Quiénes somos</a>
+        <a class="page-link" data-transition data-return-hash="#proyectos" href="../index.html#proyectos">Proyectos</a>
+        <a class="page-link" data-transition data-return-hash="#coberturas" href="../index.html#coberturas">Coberturas</a>
+      </nav>
+    </div>
+    <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+  </header>
+
+  <main>
+    <section class="section section--surface">
+      <div class="container two-col">
+        <div>
+          <h2>Coberturas de marchas</h2>
+          <p>
+            En esta sección subimos registros de las marchas y actividades en las que participamos.
+            Elegí una cobertura para ver su página con fotos en carrusel.
+          </p>
+          <a class="btn page-link" data-transition data-return-hash="#coberturas" href="../index.html">Volver al inicio</a>
+        </div>
+        <div class="photo-box">
+          <img src="../assets/img/coberturas/cover.jpg" alt="Portada de coberturas" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--muted">
+      <div class="container">
+        <h3>Marchas</h3>
+        <div class="projects-gallery" role="list">
+          <a class="project-card page-link" role="listitem" data-transition href="marcha-8m.html" title="Cobertura 8 de Marzo">
+            <img src="../assets/img/coberturas/8m/marcha (1).jpg" alt="Cobertura de la marcha del 8 de marzo" loading="lazy" />
+            <span>8 de Marzo</span>
+          </a>
+          <a class="project-card page-link" role="listitem" data-transition href="marcha-24m.html" title="Cobertura 24 de Marzo">
+            <img src="../assets/img/coberturas/04.jpg" alt="Cobertura de la marcha del 24 de marzo" loading="lazy" />
+            <span>24 de Marzo</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Activá. Todos los derechos reservados.</small>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
