@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Ensayos — Panel de carga · Activá</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/img/logos/activa.png">
+  <style>
+    :root{
+      --bg:#f7f8fb; --surface:#ffffff; --text:#1d1f23; --muted:#eef1f6;
+      --primary:#1e88e5; --primary-600:#1565c0; --border:#e2e8f0;
+      --danger:#ef4444; --shadow:0 8px 24px rgba(17,24,39,.08);
+    }
+    *{box-sizing:border-box; margin:0; padding:0;}
+    body{font-family:'Inter',system-ui,sans-serif; background:var(--bg); color:var(--text); line-height:1.6;}
+    .container{width:min(820px,92%); margin-inline:auto;}
+
+    /* Header */
+    .adm-header{
+      background:linear-gradient(135deg,#0f172a,var(--primary-600));
+      color:#fff; padding:.9rem 0; box-shadow:var(--shadow);
+      position:sticky; top:0; z-index:50;
+    }
+    .adm-header .container{display:flex; align-items:center; gap:1rem;}
+    .adm-brand{font-weight:800; letter-spacing:.04em; font-size:1.1rem; color:#fff; text-decoration:none;}
+    .adm-header-right{margin-left:auto; display:flex; align-items:center; gap:.6rem;}
+    .user-pill{
+      background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.3);
+      padding:.3rem .8rem; border-radius:999px; font-size:.82rem; font-weight:600;
+    }
+    .link-site{color:#fff; text-decoration:none; font-size:.82rem; opacity:.9;}
+    .link-site:hover{opacity:1; text-decoration:underline;}
+
+    /* Botones */
+    .btn{
+      display:inline-block; border:none; cursor:pointer;
+      background:var(--primary); color:#fff; font-weight:700;
+      padding:.7rem 1.3rem; border-radius:12px; font-size:.95rem;
+      transition:.2s background, .2s transform;
+    }
+    .btn:hover{background:var(--primary-600); transform:translateY(-1px);}
+    .btn-secondary{
+      background:var(--muted); color:var(--text); border:1px solid var(--border);
+      cursor:pointer; padding:.5rem 1rem; border-radius:10px; font-size:.85rem; font-weight:600;
+    }
+    .btn-secondary:hover{background:#e2e8f0;}
+
+    /* Login */
+    .login-card{
+      max-width:380px; margin:12vh auto 0; background:var(--surface);
+      padding:2.4rem 2rem; border-radius:18px; box-shadow:var(--shadow); text-align:center;
+    }
+    .login-card h1{font-size:1.4rem; margin-bottom:.4rem;}
+    .login-card > p{color:#64748b; font-size:.9rem; margin-bottom:1.6rem;}
+    .login-form{display:flex; flex-direction:column; gap:.7rem;}
+    .login-form input{
+      padding:.75rem 1rem; border:1.5px solid var(--border); border-radius:12px;
+      font-size:1rem; font-family:inherit; outline:none;
+    }
+    .login-form input:focus{border-color:var(--primary);}
+    .error-msg{color:var(--danger); font-size:.85rem; margin-top:.8rem;}
+
+    /* Panel */
+    .admin-main{padding:2rem 0 4rem;}
+    .admin-section-header{display:flex; align-items:center; gap:1rem; margin-bottom:1.2rem; flex-wrap:wrap;}
+    .admin-section-header h1{font-size:1.4rem; flex:1;}
+    .admin-header-btns{display:flex; gap:.5rem;}
+    .cancel-btn-wrap{display:none;}
+    .cancel-btn-wrap.visible{display:block;}
+
+    .note-form-card{background:var(--surface); padding:1.6rem; border-radius:16px; box-shadow:var(--shadow);}
+    .form-group{margin-bottom:1.1rem;}
+    .form-group label{display:block; font-weight:600; font-size:.9rem; margin-bottom:.4rem;}
+    .form-group input[type=text]{
+      width:100%; padding:.7rem .9rem; border:1.5px solid var(--border);
+      border-radius:10px; font-size:1rem; font-family:inherit; outline:none;
+    }
+    .form-group input[type=text]:focus{border-color:var(--primary);}
+    .form-group input[type=file]{font-size:.88rem;}
+    .hint-text{font-size:.78rem; color:#64748b; margin-top:.35rem;}
+    .image-preview{margin-top:.7rem;}
+    .image-preview img{max-width:100%; max-height:220px; border-radius:10px; border:1px solid var(--border);}
+
+    #editor-container{background:#fff; border-radius:0 0 10px 10px;}
+    #editor{min-height:220px; font-size:1rem;}
+    .ql-toolbar.ql-snow, .ql-container.ql-snow{border-color:var(--border);}
+    .ql-toolbar.ql-snow{border-radius:10px 10px 0 0;}
+    .ql-container.ql-snow{border-radius:0 0 10px 10px;}
+
+    .progress-wrap{margin:1rem 0;}
+    .progress-bar{height:8px; background:var(--muted); border-radius:999px; overflow:hidden;}
+    .progress-fill{height:100%; width:0; background:var(--primary); transition:width .3s;}
+    .progress-text{font-size:.82rem; color:#64748b; margin-top:.4rem; text-align:center;}
+
+    .divider{border:none; border-top:1px solid var(--border); margin:2rem 0;}
+
+    .admin-notes-section h2{font-size:1.15rem; margin-bottom:1rem;}
+    .admin-notes-list{display:flex; flex-direction:column; gap:.7rem;}
+    .admin-note-item{
+      display:flex; align-items:center; gap:1rem; background:var(--surface);
+      padding:.7rem; border-radius:12px; box-shadow:var(--shadow);
+    }
+    .admin-note-item img{width:72px; height:54px; object-fit:cover; border-radius:8px; flex-shrink:0;}
+    .admin-note-info{flex:1; min-width:0;}
+    .admin-note-info h4{font-size:.95rem; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+    .admin-note-info span{font-size:.78rem; color:#64748b;}
+    .admin-note-actions{display:flex; gap:.4rem;}
+    .btn-edit, .btn-danger{
+      border:none; cursor:pointer; padding:.4rem .8rem; border-radius:8px;
+      font-size:.82rem; font-weight:600;
+    }
+    .btn-edit{background:var(--muted); color:var(--text);}
+    .btn-edit:hover{background:#e2e8f0;}
+    .btn-danger{background:#fee2e2; color:var(--danger);}
+    .btn-danger:hover{background:var(--danger); color:#fff;}
+
+    .adm-muted{color:#64748b; font-size:.9rem;}
+    .adm-err{color:var(--danger); font-size:.9rem;}
+    .adm-err a{color:var(--primary);}
+
+    @media (max-width:560px){
+      .admin-note-item img{width:56px; height:42px;}
+      .admin-note-info h4{font-size:.88rem;}
+    }
+  </style>
+</head>
+<body>
+
+  <header class="adm-header">
+    <div class="container">
+      <a href="index.html" class="adm-brand">ACTIVÁ · Ensayos</a>
+      <div class="adm-header-right">
+        <span id="user-display" class="user-pill" style="display:none;"></span>
+        <a href="index.html" class="link-site">Ver sitio →</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Login -->
+  <main id="login-screen" class="container">
+    <div class="login-card">
+      <h1>Panel de Ensayos</h1>
+      <p>Ingresá con tu usuario para publicar y editar tus ensayos.</p>
+      <form class="login-form" id="login-form">
+        <input type="text" id="username-input" placeholder="Usuario" required autocomplete="username">
+        <input type="password" id="password-input" placeholder="Contraseña" required autocomplete="current-password">
+        <button type="submit" class="btn">Ingresar</button>
+      </form>
+      <p id="login-error" class="error-msg" style="display:none;">Usuario o contraseña incorrectos</p>
+    </div>
+  </main>
+
+  <!-- Panel -->
+  <main id="admin-panel" class="container admin-main" style="display:none;">
+    <div class="admin-section-header">
+      <h1 id="form-title">Publicar nuevo ensayo</h1>
+      <div class="admin-header-btns">
+        <div class="cancel-btn-wrap" id="cancel-btn-wrap">
+          <button class="btn-secondary" onclick="cancelEdit()">Cancelar edición</button>
+        </div>
+        <button class="btn-secondary" onclick="logout()">Cerrar sesión</button>
+      </div>
+    </div>
+
+    <div class="note-form-card">
+      <form id="note-form">
+        <div class="form-group">
+          <label for="note-title">Título</label>
+          <input type="text" id="note-title" placeholder="Título del ensayo" required>
+        </div>
+        <div class="form-group">
+          <label for="note-image">Imagen de portada</label>
+          <input type="file" id="note-image" accept="image/*">
+          <p id="image-hint" class="hint-text" style="display:none;">Dejá vacío para mantener la portada actual</p>
+          <div id="image-preview" class="image-preview"></div>
+        </div>
+        <div class="form-group">
+          <label>Contenido</label>
+          <div id="editor-container"><div id="editor"></div></div>
+        </div>
+        <div id="upload-progress" class="progress-wrap" style="display:none;">
+          <div class="progress-bar"><div id="progress-fill" class="progress-fill"></div></div>
+          <p id="progress-text" class="progress-text">Guardando...</p>
+        </div>
+        <button type="submit" id="submit-btn" class="btn" style="width:100%; margin-top:6px;">Publicar ensayo</button>
+      </form>
+    </div>
+
+    <hr class="divider">
+
+    <div class="admin-notes-section">
+      <h2>Mis ensayos</h2>
+      <div id="admin-notes-list" class="admin-notes-list"></div>
+    </div>
+  </main>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+  <script src="assets/js/firebase-config.js"></script>
+  <script src="assets/js/ensayos-admin.js"></script>
+</body>
+</html>

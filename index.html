@@ -66,7 +66,7 @@
             </article>
 
             <article class="slide is-active">
-               <a class="slide-link page-link" data-transition data-return-hash="#novedades" href="#blog" title="Activá Entrevistas">
+               <a class="slide-link page-link" data-transition data-return-hash="#novedades" href="#ensayos" title="Ensayos Activá">
                   <img src="assets/img/noticias/05.jpg" alt="Noticia destacada 1" />
                   <div class="slide-caption">
                   <h2>"A 80 años del 17 de octubre..."</h2>
@@ -196,6 +196,17 @@
       </div>
     </section>
 
+    <!-- Ensayos (se cargan desde Firebase) -->
+    <section id="ensayos" class="section section--surface">
+      <div class="container">
+        <h2>Ensayos</h2>
+        <p class="section-intro">Lecturas y reflexiones escritas por el equipo de Activá.</p>
+        <div id="ensayos-loading" class="ensayos-loading">Cargando ensayos…</div>
+        <div id="ensayos-empty" class="ensayos-empty" style="display:none;">Todavía no hay ensayos publicados.</div>
+        <div id="ensayos-grid" class="ensayos-grid"></div>
+      </div>
+    </section>
+
     <section id="coberturas" class="section section--muted">
       <div class="container">
         <h2>Coberturas</h2>
@@ -221,6 +232,20 @@
     </section> -->
   </main>
 
+  <!-- Modal de lectura de ensayo -->
+  <div id="ensayo-modal" class="ensayo-modal">
+    <div class="ensayo-modal__content">
+      <button id="ensayo-modal-close" class="ensayo-modal__close" aria-label="Cerrar">&times;</button>
+      <img id="ensayo-modal-img" src="" alt="">
+      <h2 id="ensayo-modal-title" class="ensayo-modal__title"></h2>
+      <div class="ensayo-modal__meta">
+        <span id="ensayo-modal-author" class="modal-author"></span>
+        <span id="ensayo-modal-date" class="modal-date"></span>
+      </div>
+      <div id="ensayo-modal-text" class="ensayo-modal__text"></div>
+    </div>
+  </div>
+
   <footer class="site-footer">
     <div class="container">
       <small>© <span id="year"></span> Activá. Todos los derechos reservados.</small>
@@ -228,5 +253,11 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+
+  <!-- Ensayos desde Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+  <script src="assets/js/firebase-config.js"></script>
+  <script src="assets/js/ensayos.js"></script>
 </body>
 </html>
