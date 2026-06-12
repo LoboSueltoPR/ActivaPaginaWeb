@@ -133,8 +133,8 @@ noteForm.addEventListener('submit', async (e) => {
     const title = document.getElementById('note-title').value.trim();
     const htmlContent = quill.root.innerHTML.trim();
 
-    if (!title || !htmlContent || htmlContent === '<p><br></p>') {
-        alert('Completá el título y el contenido');
+    if (!htmlContent || htmlContent === '<p><br></p>') {
+        alert('Completá el contenido del ensayo');
         return;
     }
     if (!editingNoteId && !imageBase64) {
